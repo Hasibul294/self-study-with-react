@@ -1,10 +1,20 @@
 import React from "react";
+import { Link } from "react-router-dom";
+import img from "../../images/error.png";
 
 const NotFound = () => {
   return (
     <div>
-      <h1>ERROR 404</h1>
-      <h2>Your page is not found.</h2>
+      <img className="mx-auto" src={img} alt="" />
+      <h1 className="text-4xl font-bold my-4">
+        "We can't find the page your are looking for""
+      </h1>
+      <Link to="/home">
+        <button className="font-medium bg-green-400 border-1 rounded-md py-4 px-8">
+          {" "}
+          Go to Home
+        </button>
+      </Link>
     </div>
   );
 };

@@ -7,6 +7,8 @@ import Home from "./components/Home/Home";
 import Footer from "./components/Footer/Footer";
 import Faculty from "./components/Faculty/Faculty";
 import Course from "./components/Course/Course";
+import About from "./components/About/About";
+import NotFound from "./components/NotFound/NotFound";
 
 function App() {
   const [data, setData] = useState({});
@@ -18,7 +20,6 @@ function App() {
   return (
     <div className="App">
       <BrowserRouter>
-        <Header></Header>
         <Switch>
           <Route exact path="/">
             <Home></Home>
@@ -32,8 +33,13 @@ function App() {
           <Route exact path="/faculty">
             <Faculty></Faculty>
           </Route>
+          <Route exact path="/about">
+            <About></About>
+          </Route>
+          <Route path="*">
+            <NotFound></NotFound>
+          </Route>
         </Switch>
-        <Footer> </Footer>
       </BrowserRouter>
     </div>
   );

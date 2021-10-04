@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Rating from "react-rating";
+import Footer from "../Footer/Footer";
+import Header from "../Header/Header";
 
 const Home = () => {
   const [courses, setCourses] = useState([]);
@@ -11,10 +13,11 @@ const Home = () => {
   }, []);
   return (
     <div>
-      <div className="bg-home-image p-40 text-left text-white">
-        <h1 className="text-4xl">Welcome to Self Study</h1>
+      <Header></Header>
+      <div className="bg-home-image p-36 text-left text-white">
+        <h1 className="text-4xl my-2">Welcome to Self Study</h1>
         <h1 className="text-6xl">The Best Learning Institution</h1>
-        <p className="text-lg">
+        <p className="text-lg my-2">
           There are many variations of passages of Lorem Ipsum available, but
           the majority have suffered alteration in some form, by injected
           humour, or randomised words which don't look even slightly believable.
@@ -46,6 +49,7 @@ const Home = () => {
           ))}
         </div>
       </div>
+      <Footer> </Footer>
     </div>
   );
 };
