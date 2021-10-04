@@ -5,7 +5,6 @@ import Header from "../Header/Header";
 
 const Home = () => {
   const [courses, setCourses] = useState([]);
-  //   console.log(courses);
   useEffect(() => {
     fetch("./data.JSON")
       .then((res) => res.json())
